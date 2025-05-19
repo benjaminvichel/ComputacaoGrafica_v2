@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/aula/processamento gr\u00e1fico/glfw/glfw-3.4/build/cmake_install.cmake",
+		"E:/aula/processamento gr\u00e1fico/glfw/glfw-3.4/build/src/cmake_install.cmake",
+		"E:/aula/processamento gr\u00e1fico/glfw/glfw-3.4/build/examples/cmake_install.cmake",
+		"E:/aula/processamento gr\u00e1fico/glfw/glfw-3.4/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
