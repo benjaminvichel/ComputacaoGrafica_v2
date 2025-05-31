@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ben/source/repos2022/ComputacaoGrafica/Exercicios/Modulo2
+# Install script for directory: C:/Users/ben/source/repos2022/ComputacaoGrafica/Exercicios/modulo_4_vivencial
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo2/install_local_manifest.txt"
+  file(WRITE "C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/modulo_4_vivencial/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

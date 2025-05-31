@@ -8,6 +8,7 @@
  */
 
 #include <iostream>
+#include <vector>
 #include <string>
 #include <assert.h>
 
@@ -32,20 +33,20 @@ using namespace glm;
 #include <cmath>
 
 // Protótipo da função de callback de teclado
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode);
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
 // Protótipos das funções
 int setupShader();
-GLuint loadTexture(string filePath, int &width, int &height);
+GLuint loadTexture(string filePath, int& width, int& height);
 
 void drawGeometry(GLuint shaderID, GLuint VAO, vec3 position, vec3 dimensions, float angle, int nVertices, vec3 color = vec3(1.0, 0.0, 0.0), vec3 axis = (vec3(0.0, 0.0, 1.0)));
-GLuint generateSphere(float radius, int latSegments, int lonSegments, int &nVertices);
+GLuint generateSphere(float radius, int latSegments, int lonSegments, int& nVertices);
 
 // Dimensões da janela (pode ser alterado em tempo de execução)
 const GLuint WIDTH = 800, HEIGHT = 800;
 
 // Código fonte do Vertex Shader (em GLSL): ainda hardcoded
-const GLchar *vertexShaderSource = R"(
+const GLchar* vertexShaderSource = R"(
  #version 400
  layout (location = 0) in vec3 position;
  layout (location = 1) in vec3 color;
@@ -68,7 +69,7 @@ const GLchar *vertexShaderSource = R"(
      vColor = vec4(color,1.0);
  })";
 
-const GLchar *fragmentShaderSource = R"(
+const GLchar* fragmentShaderSource = R"(
      #version 400
      in vec2 texCoord;
      uniform sampler2D texBuff;
@@ -172,7 +173,7 @@ int main()
     // #endif
 
     // Criação da janela GLFW
-    GLFWwindow *window = glfwCreateWindow(WIDTH, HEIGHT, "Ola esfera iluminada!", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Ola esfera iluminada!", nullptr, nullptr);
     glfwMakeContextCurrent(window);
 
     // Fazendo o registro da função de callback para a janela GLFW
@@ -185,8 +186,8 @@ int main()
     }
 
     // Obtendo as informações de versão
-    const GLubyte *renderer = glGetString(GL_RENDERER); /* get renderer string */
-    const GLubyte *version = glGetString(GL_VERSION);   /* version as a string */
+    const GLubyte* renderer = glGetString(GL_RENDERER); /* get renderer string */
+    const GLubyte* version = glGetString(GL_VERSION);   /* version as a string */
     cout << "Renderer: " << renderer << endl;
     cout << "OpenGL version supported " << version << endl;
 
@@ -270,7 +271,7 @@ int main()
 // Função de callback de teclado - só pode ter uma instância (deve ser estática se
 // estiver dentro de uma classe) - É chamada sempre que uma tecla for pressionada
 // ou solta via GLFW
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode)
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
@@ -307,7 +308,7 @@ int setupShader()
     {
         glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n"
-                  << infoLog << std::endl;
+            << infoLog << std::endl;
     }
     // Fragment shader
     GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -319,7 +320,7 @@ int setupShader()
     {
         glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n"
-                  << infoLog << std::endl;
+            << infoLog << std::endl;
     }
     // Linkando os shaders e criando o identificador do programa de shader
     GLuint shaderProgram = glCreateProgram();
@@ -332,7 +333,7 @@ int setupShader()
     {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n"
-                  << infoLog << std::endl;
+            << infoLog << std::endl;
     }
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
@@ -340,7 +341,7 @@ int setupShader()
     return shaderProgram;
 }
 
-GLuint loadTexture(string filePath, int &width, int &height)
+GLuint loadTexture(string filePath, int& width, int& height)
 {
     GLuint texID; // id da textura a ser carregada
 
@@ -358,7 +359,7 @@ GLuint loadTexture(string filePath, int &width, int &height)
     // Carregamento da imagem usando a função stbi_load da biblioteca stb_image
     int nrChannels;
 
-    unsigned char *data = stbi_load(filePath.c_str(), &width, &height, &nrChannels, 0);
+    unsigned char* data = stbi_load(filePath.c_str(), &width, &height, &nrChannels, 0);
 
     if (data)
     {
@@ -402,30 +403,30 @@ void drawGeometry(GLuint shaderID, GLuint VAO, vec3 position, vec3 dimensions, f
     glDrawArrays(GL_TRIANGLES, 0, nVertices);
 }
 
-GLuint generateSphere(float radius, int latSegments, int lonSegments, int &nVertices)
+GLuint generateSphere(float radius, int latSegments, int lonSegments, int& nVertices)
 {
     vector<GLfloat> vBuffer; // Posição + Cor + Normal + UV
 
     vec3 color = vec3(1.0f, 0.0f, 0.0f); // Laranja
 
-    auto calcPosUVNormal = [&](int lat, int lon, vec3 &pos, vec2 &uv, vec3 &normal)
-    {
-        float theta = lat * pi<float>() / latSegments;
-        float phi = lon * 2.0f * pi<float>() / lonSegments;
+    auto calcPosUVNormal = [&](int lat, int lon, vec3& pos, vec2& uv, vec3& normal)
+        {
+            float theta = lat * pi<float>() / latSegments;
+            float phi = lon * 2.0f * pi<float>() / lonSegments;
 
-        pos = vec3(
-            radius * cos(phi) * sin(theta),
-            radius * cos(theta),
-            radius * sin(phi) * sin(theta));
+            pos = vec3(
+                radius * cos(phi) * sin(theta),
+                radius * cos(theta),
+                radius * sin(phi) * sin(theta));
 
-        uv = vec2(
-            phi / (2.0f * pi<float>()), // u
-            theta / pi<float>()         // v
-        );
+            uv = vec2(
+                phi / (2.0f * pi<float>()), // u
+                theta / pi<float>()         // v
+            );
 
-        // Normal é a posição normalizada (posição/radius)
-        normal = normalize(pos);
-    };
+            // Normal é a posição normalizada (posição/radius)
+            normal = normalize(pos);
+        };
 
     for (int i = 0; i < latSegments; ++i)
     {
@@ -441,14 +442,14 @@ GLuint generateSphere(float radius, int latSegments, int lonSegments, int &nVert
             calcPosUVNormal(i + 1, j + 1, v3, uv3, n3);
 
             // Primeiro triângulo
-            vBuffer.insert(vBuffer.end(), {v0.x, v0.y, v0.z, color.r, color.g, color.b, n0.x, n0.y, n0.z, uv0.x, uv0.y});
-            vBuffer.insert(vBuffer.end(), {v1.x, v1.y, v1.z, color.r, color.g, color.b, n1.x, n1.y, n1.z, uv1.x, uv1.y});
-            vBuffer.insert(vBuffer.end(), {v2.x, v2.y, v2.z, color.r, color.g, color.b, n2.x, n2.y, n2.z, uv2.x, uv2.y});
+            vBuffer.insert(vBuffer.end(), { v0.x, v0.y, v0.z, color.r, color.g, color.b, n0.x, n0.y, n0.z, uv0.x, uv0.y });
+            vBuffer.insert(vBuffer.end(), { v1.x, v1.y, v1.z, color.r, color.g, color.b, n1.x, n1.y, n1.z, uv1.x, uv1.y });
+            vBuffer.insert(vBuffer.end(), { v2.x, v2.y, v2.z, color.r, color.g, color.b, n2.x, n2.y, n2.z, uv2.x, uv2.y });
 
             // Segundo triângulo
-            vBuffer.insert(vBuffer.end(), {v1.x, v1.y, v1.z, color.r, color.g, color.b, n1.x, n1.y, n1.z, uv1.x, uv1.y});
-            vBuffer.insert(vBuffer.end(), {v3.x, v3.y, v3.z, color.r, color.g, color.b, n3.x, n3.y, n3.z, uv3.x, uv3.y});
-            vBuffer.insert(vBuffer.end(), {v2.x, v2.y, v2.z, color.r, color.g, color.b, n2.x, n2.y, n2.z, uv2.x, uv2.y});
+            vBuffer.insert(vBuffer.end(), { v1.x, v1.y, v1.z, color.r, color.g, color.b, n1.x, n1.y, n1.z, uv1.x, uv1.y });
+            vBuffer.insert(vBuffer.end(), { v3.x, v3.y, v3.z, color.r, color.g, color.b, n3.x, n3.y, n3.z, uv3.x, uv3.y });
+            vBuffer.insert(vBuffer.end(), { v2.x, v2.y, v2.z, color.r, color.g, color.b, n2.x, n2.y, n2.z, uv2.x, uv2.y });
         }
     }
 
@@ -463,19 +464,19 @@ GLuint generateSphere(float radius, int latSegments, int lonSegments, int &nVert
     glBufferData(GL_ARRAY_BUFFER, vBuffer.size() * sizeof(GLfloat), vBuffer.data(), GL_STATIC_DRAW);
 
     // Layout da posição (location 0)
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid *)(0));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid*)(0));
     glEnableVertexAttribArray(0);
 
     // Layout da cor (location 1)
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid *)(3 * sizeof(GLfloat)));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(1);
 
     // Layout da normal (location 2)
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid *)(6 * sizeof(GLfloat)));
+    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
 
     // Layout da UV (location 3)
-    glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid *)(9 * sizeof(GLfloat)));
+    glVertexAttribPointer(3, 2, GL_FLOAT, GL_FALSE, 11 * sizeof(GLfloat), (GLvoid*)(9 * sizeof(GLfloat)));
     glEnableVertexAttribArray(3);
 
     glBindVertexArray(0);

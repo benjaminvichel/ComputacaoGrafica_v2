@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
@@ -32,6 +33,21 @@
 					[
 						0
 					]
+				},
+				{
+					"build" : "Exercicios/modulo_4_vivencial",
+					"jsonFile" : "directory-Exercicios.modulo_4_vivencial-Debug-2fa9d326e2372343a8f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/modulo_4_vivencial",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -41,12 +57,14 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "ProcessamentoGrafico",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -57,6 +75,13 @@
 					"id" : "Modulo2::@c82bee524b609eed21c5",
 					"jsonFile" : "target-Modulo2-Debug-6b2e0fae2258091faf5b.json",
 					"name" : "Modulo2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "modulo_4_vivencial::@628d11b9606c338cef22",
+					"jsonFile" : "target-modulo_4_vivencial-Debug-1b60fab2e60d5f497c5e.json",
+					"name" : "modulo_4_vivencial",
 					"projectIndex" : 0
 				}
 			]
@@ -71,6 +96,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 8
 	}
 }

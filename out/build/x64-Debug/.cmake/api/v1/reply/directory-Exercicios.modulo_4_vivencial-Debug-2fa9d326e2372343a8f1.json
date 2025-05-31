@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "Exercicios/modulo_4_vivencial",
+		"source" : "Exercicios/modulo_4_vivencial"
+	}
+}
