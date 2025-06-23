@@ -1,0 +1,17 @@
+# ninja log v6
+23	392	7724177446735367	Exercicios/Modulo2/CMakeFiles/Modulo2.dir/__/__/common/glad/src/glad.c.obj	4d5c86bfceb40dd5
+27	379	7724177689772272	Exercicios/modulo_4_vivencial/CMakeFiles/modulo_4_vivencial.dir/__/__/common/glad/src/glad.c.obj	2dfb741c6e905e82
+17	848	7724177446735367	Exercicios/Modulo2/CMakeFiles/Modulo2.dir/main.cpp.obj	f0ef8e54199f15a8
+20	1038	7724177689616028	Exercicios/modulo_4_vivencial/CMakeFiles/modulo_4_vivencial.dir/main.cpp.obj	9c8a41dee09e160d
+851	1220	7724177455089992	Exercicios/Modulo2/Modulo2.exe	fac2ac1312b17d47
+1038	1402	7724177699772286	Exercicios/modulo_4_vivencial/modulo_4_vivencial.exe	11b487a152b48a31
+12	1422	7724217589841141	Exercicios/Modulo3/CMakeFiles/Modulo3.dir/main.cpp.obj	1acb36de76fd420e
+23	390	7724198184380545	Exercicios/Modulo3/CMakeFiles/Modulo3.dir/__/__/common/glad/src/glad.c.obj	3a1d5a999263b25f
+19	334	7724217633378766	Exercicios/Modulo3/Modulo3.exe	43a2157cbf4c9336
+18	290	7724222690836835	Exercicios/Modulo3/Modulo3.exe	5831bc30598f2bb6
+12	1341	7724232370695120	Exercicios/Modulo3/CMakeFiles/Modulo3.dir/main.cpp.obj	1acb36de76fd420e
+1342	1729	7724232383990261	Exercicios/Modulo3/Modulo3.exe	5831bc30598f2bb6
+15	1111	7724234577075464	Exercicios/Modulo3/CMakeFiles/Modulo3.dir/main.cpp.obj	1acb36de76fd420e
+1112	1495	7724234588059873	Exercicios/Modulo3/Modulo3.exe	5831bc30598f2bb6
+16	1066	7724235716798306	Exercicios/Modulo3/CMakeFiles/Modulo3.dir/main.cpp.obj	1acb36de76fd420e
+1067	1363	7724235727315694	Exercicios/Modulo3/Modulo3.exe	5831bc30598f2bb6
