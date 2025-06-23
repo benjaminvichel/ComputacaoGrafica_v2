@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(Exercicios/Modulo2)
 add_subdirectory(Exercicios/Modulo3)
+add_subdirectory(Exercicios/Modulo4)
 add_subdirectory(Exercicios/modulo_4_vivencial)

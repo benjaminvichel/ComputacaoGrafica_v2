@@ -6,6 +6,9 @@ C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/M
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo3/CMakeFiles/Modulo3.dir
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo3/CMakeFiles/edit_cache.dir
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo3/CMakeFiles/rebuild_cache.dir
+C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo4/CMakeFiles/Modulo4.dir
+C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo4/CMakeFiles/edit_cache.dir
+C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/Modulo4/CMakeFiles/rebuild_cache.dir
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/modulo_4_vivencial/CMakeFiles/modulo_4_vivencial.dir
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/modulo_4_vivencial/CMakeFiles/edit_cache.dir
 C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug/Exercicios/modulo_4_vivencial/CMakeFiles/rebuild_cache.dir
