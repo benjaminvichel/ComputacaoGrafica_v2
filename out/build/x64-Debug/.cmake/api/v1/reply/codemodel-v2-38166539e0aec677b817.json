@@ -1,0 +1,176 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Exercicios/Modulo2",
+					"jsonFile" : "directory-Exercicios.Modulo2-Debug-6896e1cb4beb1aa1bc03.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/Modulo2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Exercicios/Modulo3",
+					"jsonFile" : "directory-Exercicios.Modulo3-Debug-219c3ab8ba357c62c077.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/Modulo3",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Exercicios/Modulo4",
+					"jsonFile" : "directory-Exercicios.Modulo4-Debug-5b3ddeeb48eac50120bf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/Modulo4",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Exercicios/Modulo5",
+					"jsonFile" : "directory-Exercicios.Modulo5-Debug-4f9747bea2e6aa347b68.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/Modulo5",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "Exercicios/modulo_4_vivencial",
+					"jsonFile" : "directory-Exercicios.modulo_4_vivencial-Debug-2fa9d326e2372343a8f1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Exercicios/modulo_4_vivencial",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "ProcessamentoGrafico",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Modulo2::@c82bee524b609eed21c5",
+					"jsonFile" : "target-Modulo2-Debug-6b2e0fae2258091faf5b.json",
+					"name" : "Modulo2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Modulo3::@5e48516b445f79d25ad6",
+					"jsonFile" : "target-Modulo3-Debug-8f831b6c2d0dff9a7a50.json",
+					"name" : "Modulo3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Modulo4::@3cf2c14000257622af53",
+					"jsonFile" : "target-Modulo4-Debug-501999053ccf6407745f.json",
+					"name" : "Modulo4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "Modulo5::@e4a7b19473d2b540a19c",
+					"jsonFile" : "target-Modulo5-Debug-6cb088759a8ee8985cc6.json",
+					"name" : "Modulo5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "modulo_4_vivencial::@628d11b9606c338cef22",
+					"jsonFile" : "target-modulo_4_vivencial-Debug-1b60fab2e60d5f497c5e.json",
+					"name" : "modulo_4_vivencial",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ben/source/repos2022/ComputacaoGrafica/out/build/x64-Debug",
+		"source" : "C:/Users/ben/source/repos2022/ComputacaoGrafica"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
